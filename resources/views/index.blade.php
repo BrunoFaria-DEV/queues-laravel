@@ -16,15 +16,15 @@
             <div class="col-6 d-flex justify-content-center">
                 <div>
                     <h4 class="text-center form-label mb-3 text-gray">Gerar PDF Síncrono</h4>
-                    <a href="{{ route('gerar-pdf') }}" class="btn btn-primary">PDF com 50 repetições</a>
-                    <a href="{{ route('gerar-pdf') }}?largePDF=50000" class="btn btn-primary">PDF com 50000 repetições</a>
+                    <a href="{{ route('gerar_pdf') }}" class="btn btn-primary">PDF com 50 repetições</a>
+                    <a href="{{ route('gerar_pdf') }}?largePDF=50000" class="btn btn-primary">PDF com 50000 repetições</a>
                 </div>
             </div>
             <div class="col-6 d-flex justify-content-center">
                 <div>
                     <h4 class="text-center form-label mb-3 text-gray">Gerar PDF Assíncrono</h4>
-                    <a href="{{ route('gerar-pdf') }}" class="btn btn-primary">PDF com 50 repetições</a>
-                    <a href="{{ route('gerar-pdf') }}?largePDF=50000" class="btn btn-primary">PDF com 50000 repetições</a>
+                    <a href="{{ route('gerar_pdf_assincrono') }}" class="btn btn-primary">PDF com 50 repetições</a>
+                    <a href="{{ route('gerar_pdf') }}?largePDF=50000" class="btn btn-primary">PDF com 50000 repetições</a>
                 </div>
             </div>
         </div>
