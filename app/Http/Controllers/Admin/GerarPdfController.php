@@ -27,6 +27,10 @@ class GerarPdfController extends Controller
 
         // $pdf = Pdf::loadView('pdf.pdf', ['title' => 'Pdf sem fila com '.$value.' repetições', 'value' => $value])->setPaper('a4', 'landscape');
 
-        return dispatch(new CreatePDFJob($value));
+        dispatch(new CreatePDFJob($value));
+
+        return response()->json([
+            'message' => 'O PDF está sendo gerado de forma assíncrona.',
+        ], 202);
     }
 }

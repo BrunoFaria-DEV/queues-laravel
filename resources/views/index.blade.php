@@ -13,18 +13,26 @@
         <div class="row">
             <h1 class="h1 text-center mb-4 inline">Pagina de download</h1>
             <h3 class="text-center mb-3 text-info">Escolha entre gerar o pdf de forma sincrona ou assincrona:</h3>
-            <div class="col-6 d-flex justify-content-center">
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
                 <div>
                     <h4 class="text-center form-label mb-3 text-gray">Gerar PDF Síncrono</h4>
-                    <a href="{{ route('gerar_pdf') }}" class="btn btn-primary">PDF com 50 repetições</a>
-                    <a href="{{ route('gerar_pdf') }}?largePDF=50000" class="btn btn-primary">PDF com 50000 repetições</a>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ route('gerar_pdf') }}" class="btn btn-primary">PDF com 50 repetições</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ route('gerar_pdf') }}?largePDF=5000" class="btn btn-primary">PDF com 5000 repetições</a>
+                    </div>
                 </div>
             </div>
-            <div class="col-6 d-flex justify-content-center">
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
                 <div>
                     <h4 class="text-center form-label mb-3 text-gray">Gerar PDF Assíncrono</h4>
-                    <a href="{{ route('gerar_pdf_assincrono') }}" class="btn btn-primary">PDF com 50 repetições</a>
-                    <a href="{{ route('gerar_pdf') }}?largePDF=50000" class="btn btn-primary">PDF com 50000 repetições</a>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ route('gerar_pdf_assincrono') }}" class="btn btn-primary">PDF com 50 repetições</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{ route('gerar_pdf_assincrono') }}?largePDF=5000" class="btn btn-primary">PDF com 5000 repetições</a>
+                    </div>
                 </div>
             </div>
         </div>

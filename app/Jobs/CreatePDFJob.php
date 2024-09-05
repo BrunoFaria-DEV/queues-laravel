@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Storage;
 
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -30,5 +30,9 @@ class CreatePDFJob implements ShouldQueue
     public function handle(): void
     {
         $pdf = Pdf::loadView('pdf.pdf', ['title' => 'Pdf sem fila com '.$this->value.' repetições', 'value' => $this->value])->setPaper('a4', 'landscape');
+
+        // Salva o PDF em um diretório específico
+        $filename = 'pdfs/gerado_com_fila_' . time() . '.pdf';
+        Storage::put($filename, $pdf->output());
     }
 }
